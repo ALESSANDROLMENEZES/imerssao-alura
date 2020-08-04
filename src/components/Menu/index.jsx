@@ -1,15 +1,15 @@
 import React from 'react';
 import Logo from '../../assets/img/logo.png';
-import ButtonLink from './components/ButtonLink';
+import { Link } from 'react-router-dom';
 import './Menu.css';
 
 export default props => (
     <header>
         <nav className="Menu">
-            <a href="/">
+            <Link to="/">
                 <img className="Logo" src={Logo} alt="logo" />
-            </a>
-            <ButtonLink className="ButtonLink" href="/">Novo vídeo</ButtonLink>
+            </Link>
+            <Link className="ButtonLink" to="/cadastro/video">Novo vídeo</Link>
         </nav>
     </header>
 );
